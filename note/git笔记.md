@@ -49,8 +49,15 @@
                
                
             第三步：再推送到远程
+                 git push origin 本地分支名：远程分支名
+                  例如：git push origin master:main
+                  
+                   git push origin 本地分支名
+                   
+                   例如：git push origin master
+              如果远程拒绝推送本地文件，则应该先将远程文件拉取本地，然后再推送远程
               
-              
+              拉取：git pull origin 远程分支名:本地分支名
         ```
 
          
