@@ -57,12 +57,29 @@
                    例如：git push origin master
               如果远程拒绝推送本地文件，则应该先将远程文件拉取本地，然后再推送远程
               
-              拉取：git pull origin 远程分支名:本地分支名
+              拉取：
+              
+                 //从远程拉取到本地，并跟本地分支自动合并 
+                 git pull origin 远程分支名:本地分支名  
+              
+                如果不能git pull，解决方案：
+                第一步：只拉取到本地，不合并分支
+                 git fetch  origin main:master
+                 
+                第二步：关联远程main分支到本地master分支
+                 git branch --set-upstream-to=origin/main master
+                 
+                 第三步：然后再使用git pull加拉取
+                 git pull --allow-unrelated-histories
+                 
+                 其中：allow-unrelated-histories代表允许不相关的历史记录
         ```
 
          
 
-    3. xxx
+    3. 作业：
+
+        1. 将上月技能代码推送到github指定的master远程仓库下
 
     
 
