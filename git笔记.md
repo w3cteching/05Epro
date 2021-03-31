@@ -19,6 +19,7 @@
         2. 查看当前git文件状态：git status
         3. 添加文件到暂存区：git add 文件名1 
         4. 提交到本地仓库：git commit -m '版本说明'
+        5. 添加可忽略文件：.gitignore
     3. xxx
 
     
