@@ -89,4 +89,92 @@
 
     
 
-​	
+​	# 一、历史回退
+
+1. 查看提交历史记录
+
+```
+//详细查看
+git log
+//缩略查看
+git log --pretty=oneline
+
+//查看所有的提交commit_id
+git reflog --pretty=oneline
+```
+
+2. 回退到过去或现在
+
+```
+//回退到过去
+git reset --hard commit_id
+```
+
+
+
+# 二、分支管理
+
+1. 分支的作用
+
+```
+方便团队之间协作开发，分支之间的代码互不影响
+git init 初始化完后，默认本地只有一个分支 master
+```
+
+2. 项目分支结构
+
+```
+master:主分支，这个分支上不做项目开发，用于发布产品的分支
+dev:开发分支
+bug:调度bug的分支
+feature:开发新功能的功能
+成员分支：例如：姓名_功能
+```
+
+<img src="media/image-20210401094324827.png" alt="image-20210401094324827" style="zoom:50%;" />
+
+3. 分支常用命令
+
+```
+1.查看分支：git branch
+例如：
+  main
+* master  //分支前带*，当前要操作的分支
+2.创建分支: git branch 新分支名
+3.切换分支: git checkout 要切换的分支名
+4.自动创建并分支：git checkout -b 要创建和切换的分支
+5.合并分支：git merge 要合并的分支
+ 
+   注意：如果多人修改同一个文件，出现冲突，先解决冲突(采用当前的，采用传入，两者都保留)，再add,commit
+6.分支提交到远程
+   git push origin 要提交的分支名
+7.删除分支
+
+    (1)删除已经合并过的分支
+      git branch -d 要删除的分支名  
+    
+    (2)删除未被合并的分支
+      git branch -D 要删除的分支名
+    
+    (3)删除远程分支： 
+      git push origin :要删除的分支名
+    
+
+```
+
+
+
+# 三、克隆（clone）仓库
+
+```
+git clone 远程仓库地址
+
+例如： git clone git@github.com:vuejs/vue.git
+```
+
+
+
+# 四、团队协作
+
+# 五、git可视化操作
+
